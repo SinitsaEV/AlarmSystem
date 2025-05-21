@@ -33,7 +33,7 @@ public class Thief : MonoBehaviour
 
         _transform.position = Vector3.MoveTowards(_transform.position, _endPosition, Time.deltaTime * _speed);
 
-        if ((_transform.position - _endPosition).sqrMagnitude < _reachedDistance * _reachedDistance)
+        if ((_transform.position - _endPosition).sqrMagnitude < _reachedDistance)
         {
             StartCoroutine(DelayDirectionChange());
         }
