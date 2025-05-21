@@ -4,7 +4,7 @@ using UnityEngine;
 public class Sensor : MonoBehaviour
 {
     public Action AlarmTriggered;
-    public Action OnZoneDeactivated;
+    public Action ZoneDeactivated;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +13,6 @@ public class Sensor : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        OnZoneDeactivated?.Invoke();
+        ZoneDeactivated?.Invoke();
     }
 }

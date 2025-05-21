@@ -19,7 +19,7 @@ public class AlarmSystem : MonoBehaviour
         if (_sensor != null)
         {
             _sensor.AlarmTriggered += OnAlarmTriggered;
-            _sensor.OnZoneDeactivated += OnZoneDeactivated;
+            _sensor.ZoneDeactivated += OnZoneDeactivated;
         }
     }
 
@@ -28,7 +28,7 @@ public class AlarmSystem : MonoBehaviour
         if (_sensor != null)
         {
             _sensor.AlarmTriggered -= OnAlarmTriggered;
-            _sensor.OnZoneDeactivated -= OnZoneDeactivated;
+            _sensor.ZoneDeactivated -= OnZoneDeactivated;
         }
     }
 
