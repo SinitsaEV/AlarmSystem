@@ -11,11 +11,6 @@ public class Sensor : MonoBehaviour
         AlarmTriggered?.Invoke();
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        
-    }
-
     private void OnTriggerExit(Collider other)
     {
         OnZoneDeactivated?.Invoke();

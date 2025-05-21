@@ -1,10 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Speaker : MonoBehaviour
 {
-    [SerializeField] private AudioSource _audioSource;
+    private AudioSource _audioSource;
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     public void PlayAlarm()
     {
